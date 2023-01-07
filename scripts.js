@@ -51,21 +51,20 @@ const BLOCKCHAIN_EXPLORERS = {
  * ABI needed to interpret how to interact with the contract
  */
 const CONTRACT_ABI = [
-		{
-			"inputs": [],
-			"name": "do_scam",
-			"outputs": [],
-			"stateMutability": "nonpayable",
-			"type": "function"
-		},
-		{
-			"inputs": [],
-			"name": "do_scam2",
-			"outputs": [],
-			"stateMutability": "nonpayable",
-			"type": "function"
-		}
-	];
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "nft_id",
+						"type": "uint256"
+					}
+				],
+				"name": "do_mine",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		];
 
 // Functions
 // ========================================================
@@ -292,7 +291,7 @@ const onSubmitContractRead = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'do_scam');
+    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'mining');
     const interface = new ethers.utils.Interface([GetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${GetGreeting.name}`);
     console.log({ encodedFunction });
@@ -334,7 +333,7 @@ const onSubmitContractWrite = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'do_scam2');
+    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'mining');
     const interface = new ethers.utils.Interface([SetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
     console.log({ encodedFunction });
