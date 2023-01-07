@@ -36,7 +36,7 @@ const CHAIN_ID_REQUIRED = 5; //Goerli
  */
 const CONTRACT_ON_CHAINS = {
     1: '0x76460E73eadE1DDe315E07a5eCa092448c193a2F',
-    5: '0x2C2c02d172737120e325614219ac7aE309906493'
+    5: '0x36241c0Cd1D21d48DB513904b8a3C2c244986843'
 };
 
 /**
@@ -291,7 +291,7 @@ const onSubmitContractRead = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'mining');
+    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'do_scam');
     const interface = new ethers.utils.Interface([GetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${GetGreeting.name}`);
     console.log({ encodedFunction });
@@ -333,7 +333,7 @@ const onSubmitContractWrite = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'mining');
+    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'Do_scam2');
     const interface = new ethers.utils.Interface([SetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
     console.log({ encodedFunction });
