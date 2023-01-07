@@ -319,9 +319,9 @@ const onSubmitContractRead = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'my_function1');
-    const interface = new ethers.utils.Interface([GetGreeting]);
-    const encodedFunction = interface.encodeFunctionData(`${GetGreeting.name}`);
+    const my_function = CONTRACT_ABI.find(i => i.name === 'my_function1');
+    const interface = new ethers.utils.Interface([my_function]);
+    const encodedFunction = interface.encodeFunctionData(`${my_function.name}`);
     console.log({ encodedFunction });
 
     // Request getGreeting
@@ -361,9 +361,9 @@ const onSubmitContractWrite = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'my_functioin2');
-    const interface = new ethers.utils.Interface([SetGreeting]);
-    const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
+    const my_function = CONTRACT_ABI.find(i => i.name === 'my_functioin2');
+    const interface = new ethers.utils.Interface([my_function]);
+    const encodedFunction = interface.encodeFunctionData(`${my_function.name}`, [greeting]);
     console.log({ encodedFunction });
 
     // Request setGreeting
