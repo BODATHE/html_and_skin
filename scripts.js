@@ -34,7 +34,7 @@ const CHAIN_DICTIONARY = {
 /**
  * Required chain to interact with contract
  */
-const CHAIN_ID_REQUIRED = 5; //Goerli
+const CHAIN_ID_REQUIRED = 80001; //Mumbai
 
 /**
  * Same contract deployed to each network
@@ -45,7 +45,7 @@ const CONTRACT_ON_CHAINS = {
     137: '0x375F01b156D9BdDDd41fd38c5CC74C514CB71f73',
     1337: '',
     1402: '0x76460E73eadE1DDe315E07a5eCa092448c193a2F',
-    80001: '0x7Bd54062eFa363A97dC20f404825597455E93582',
+    80001: '0xc6758B319d56409613E4fD4Cd3f9Cd76aBAb0997',
     11155111: '0x375f01b156d9bdddd41fd38c5cc74c514cb71f73',
 };
 
