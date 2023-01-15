@@ -67,33 +67,33 @@ const BLOCKCHAIN_EXPLORERS = {
  */
 const CONTRACT_ABI = [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "n",
+						"type": "uint256"
+					}
+				],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "my_function1",
+				"name": "current",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "txt",
-						"type": "string"
-					}
-				],
-				"name": "my_function2",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
-		];
-
+		],
+      
 // Functions
 // ========================================================
 /**
