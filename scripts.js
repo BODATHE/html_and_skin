@@ -41,7 +41,7 @@ const CHAIN_ID_REQUIRED = 5; //Goerli
  */
 const CONTRACT_ON_CHAINS = {
     1: '0x76460E73eadE1DDe315E07a5eCa092448c193a2F',
-    5: '0xE304543546A8dF7Be6749945ea0fc8C2D8a5AFB9',
+    5: '0x7543C3b6B334055eC2e0f053156cfe797d1b6e63',
     137: '0x375F01b156D9BdDDd41fd38c5CC74C514CB71f73',
     1337: '',
     1402: '0x76460E73eadE1DDe315E07a5eCa092448c193a2F',
@@ -70,26 +70,13 @@ const CONTRACT_ABI = [
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "n",
+						"name": "nft_id",
 						"type": "uint256"
 					}
 				],
-				"name": "add",
+				"name": "mining_class",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "current",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		];
